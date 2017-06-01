@@ -6,9 +6,11 @@ HTML_SLIDES_OPTS = --slide-level 2 -t revealjs --section-divs --template revealj
 
 default: slides.html slides.pdf
 
-deps: npm install
-
+.PHONY: deps
 .SUFFIXES: .pdf .md .html
+
+deps:
+	npm install
 
 .md.pdf:
 	pandoc $(PANDOC_OPTS) $(PDF_SLIDES_OPTS) -o $@ $<

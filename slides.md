@@ -19,6 +19,11 @@ multifilter:
 
 <https://www.wikidata.org/wiki/User:JakobVoss/Bibtag2017>
 
+<https://etherpad.wikimedia.org/p/bibtag2017>
+
+Markdown-Quelltext dieser Folien (CC-BY-SA):\
+<http://github.com/jakobib/bibtag2017>
+
 ---
 
 ![](wikidata.png){width=80%}
@@ -78,7 +83,7 @@ MediaWiki
 
 ---
 
-![](Wikidata_statement_with_ids.png)
+![](Wikidata_statement_with_ids.png){width=100%}
 
 
 ## Übungen
@@ -92,96 +97,125 @@ MediaWiki
 ## Weitere Bestadteile
 
 * Bezeichnungen und Beschreibungen
+* Ränge
 * Qualifier
-* Nachweise/Fundstellen
+* Fundstellen/Nachweise
+* Datentypen
 
 *Alles ist Item, Property oder Value!*
 
----
-
-![](Wikidata_statement_with_ids.png)
+<https://www.wikidata.org/wiki/Wikidata:Glossary>
 
 ---
 
-![](wikidata-statements.png)
+![](wikidata-statements.png){height=70%}
+
+## Datentypen
+
+* Hängen von der Eigenschaft ab
+
+<https://www.wikidata.org/wiki/Help:Data_type>
 
 ## Wikidata-Community
 
 * Sehr offen
 * Mehrsprachig
-* Hilfe-Seiten verbesserungswürdig
+* Verschiedene Hilfe- und Einstiegsseiten
+    * teilweise verbesserungswürdig
 
-# Bearbeitung
+## Bearbeitung
 
-## Letzte Änderungen
+* Letzte Änderungen
+    * Wikidata Recent Changes (live stream)\
+      <https://tools.wmflabs.org/wikidata-todo/rcvis.html>
+    * Versionsgeschichte von Items/Properties
 
-* Wikidata Recent Changes (live stream)\
-  <https://tools.wmflabs.org/wikidata-todo/rcvis.html>
-* Versionsgeschichte von Items/Properties
-
-## Übung: erste Bearbeitung
-
-* Beliebige Bearbeitungen\
+* Spielwiese für beliebige Bearbeitungen\
   <https://www.wikidata.org/wiki/Wikidata:Sandbox>
 
-* Sinnvolle Bearbeitungen\
-  z.B. Einträge zu Bibliotheken
+## Übung
+
+* Beispiel: Einträge zu Bibliotheken ergänzen
+    * Namen
+    * Typ
+    * Ort
+    * Verbund
+    * Leitung
+    * ...
+
+## Neue Items anlegen
+
+* Geringere Relevanzriterien als in Wikipedia
+* Wenn dann bitte etwas ausführlicher
 
 ## Zugriff per APIs
 
 * Zugriff in JSON per MediaWiki-API
-* Zugriff via RDF per SPARQL
+* Zugriff via RDF per SPARQL\
+  <https://query.wikidata.org/>
 
-* Verschiedenartige Darstellungen und Abfragen möglich
-    * <http://www.wikidata.org/entity/Q22279816>
-    * <https://tools.wmflabs.org/sqid/#/view?id=Q22279816>
-    * <https://tools.wmflabs.org/reasonator/?&lang=de&q=22692845>
-    * [Histropedia](http://histropedia.com/timeline/2j2stpg9bg0t/Pixar-animated-films)
+* Verschiedenartige Darstellungen
+    * <https://tools.wmflabs.org/reasonator/>
+    * <https://tools.wmflabs.org/sqid/>
     * ...
 
-## Übung: Statements mit Qualifiern und Quellen
+## Übung
 
 * DirektorInnen der Deutschen Nationalbibliothek
+* Statements mit Qualifiern und Fundstellen!
 
-## Identifier in Wikidata
+## Demo: Abfragen
 
-... GND, mix'n'match etc. ...
+<https://query.wikidata.org/>
 
-## Wikidata-Schemas
+* Liste aller DirektorInnen der DNB
+* Liste aller Bibliotheken im GBV
 
-* Wikidata-Eigenschaften für Eigenschaften
-* Noch nicht vollständig umgesetzt
-* Validierung erst *nachträglich* und *optional*
-* Beispiele:
-    * GND-ID ([P227])
-    * GCD Serien-ID ([P3589])
+~~~sparql
+SELECT ... WHERE {
+   ...   
+}
+~~~
 
+## Expertentool: Quickstatements
+
+<https://tools.wmflabs.org/quickstatements/> (!)
+
+* SUB Göttingen | Mitglied von | Kalliope
+    * von | Verbundkatalog
+    * importiert aus | ISIL-Verzeichnis
+
+[Q564783|P463|Q1722480|P642|Q526334|S143|Q28657655](https://tools.wmflabs.org/quickstatements/#v1=Q564783|P463|Q1722480|P642|Q526334|S143|Q28657655)
 
 ---
 
-![](Q413.png){width=100%}
+## Quickstatements
 
-# Wikidata Abfragen
+![](quickstatements.png){width=100%}
 
-...
+*Danke an Manuel Moch für die Anregung!*
 
-* Föderierte Anfragemöglichkeiten (SPARQL federated queries)
+## Weitere Tools
 
-## Tools
-
+* [Wikidata:Tools](https://www.wikidata.org/wiki/Wikidata:Tools)
+* Externe Tools
 * Hay's Tools Directory\
   <https://tools.wmflabs.org/hay/directory/#/search/wikidata>
-* unvollständig!
+* Helferlein/Gadgets in den Benutzereinstellungen
+* Benutzer-Skripte
 
-# WikiCite
+*Listen leider unvollständig*
 
-...
+## Beispiel-Tools
 
-## Wissenschaftliche Artikel in Wikidata
+* <https://tools.wmflabs.org/wikidata-game/distributed/>
+* <https://tools.wmflabs.org/sourcemd/>
 
-Wieviele Wissenschaftliche Artikel sind in Wikidata verzeichnet?
+## Wie Datenmüll verhindern?
 
-\small 
+* Property Constraints
+* Übung: Wie steht's um "Mitglied von" [P463]?
+* Validierung erst *nachträglich* und *optional*\
+  mit Hilfe von Abfragen
 
-<https://finnaarupnielsen.wordpress.com/2017/05/25/some-statistics-on-scholarly-data-in-wikidata/>
 
